@@ -14,7 +14,7 @@ let App = () =>{
 
   //Add
   let add = (numa,numb)=>{
-console.log(numa+ numb);
+console.log(numa+ numb); 
   } 
 
   //Minus
