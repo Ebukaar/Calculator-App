@@ -12,25 +12,31 @@ let App = () =>{
  
   const [numbertwo, SetNumbertwo] = useState(2);
 
+  const [answer, SetAnswer] = useState();
+
   //Add
   let add = (numa,numb)=>{
-console.log(numa+ numb); 
+// console.log(numa+ numb); 
+    SetAnswer(numa + numb);
   } 
 
   //Minus
   let minus = (numa, numb) =>{
-    console.log(numa - numb);
+    //console.log(numa - numb);
+    SetAnswer(numa - numb);
   }
  
 
   //Multiply
  function multiply ( numa, numb) {
-   console.log(numa * numb);
+   //console.log(numa * numb);
+   SetAnswer(numa * numb);
   }
 
   //Divide
   function divide (numa, numb) {
-    console.log(numa/numb);
+    //console.log(numa/numb);
+    SetAnswer(numa/numb);
   }
 
   let handleOnchangeone = (donald)=>{
@@ -59,7 +65,8 @@ console.log(numa+ numb);
     <input name="b" type="number"  onChange={(e)=>handleOnchangetwo(e)}>
   
     </input>
-    =
+    = 
+    <p style={{display: 'inline'}}> {answer}</p> 
     <br/>
     <button onClick={()=>add(numberone,numbertwo)}>
       +
